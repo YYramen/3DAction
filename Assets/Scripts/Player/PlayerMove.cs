@@ -21,6 +21,11 @@ public class PlayerMove : MonoBehaviour
     int _hashFront = Animator.StringToHash("Front");
     int _hashSide = Animator.StringToHash("Side");
 
+    bool _dashFlg;
+    [SerializeField] Transform _rayPos;
+    [SerializeField] float _rayRange = 3.0f;
+    [SerializeField] int _rayValue;
+
     private void Awake()
     {
         _anim = GetComponent<Animator>();
@@ -64,9 +69,18 @@ public class PlayerMove : MonoBehaviour
         _anim.SetFloat(_hashSide, velocity.x, 0.1f, Time.deltaTime);
 
         // ダッシュ
+        Debug.DrawRay(_rayPos.transform.position, transform.forward * _rayRange, Color.blue);
         if (Input.GetButtonDown("Dash"))
         {
-            Dash(dir);
+            dir = Camera.main.transform.TransformDirection(dir);
+            dir.y = 0;
+            Dash(dir.normalized);
+        }
+
+        if (_dashFlg)
+        {
+            _rb.velocity = Vector3.zero;
+            _dashFlg = false;
         }
     }
 
@@ -76,7 +90,27 @@ public class PlayerMove : MonoBehaviour
     /// <param name="dir">ダッシュの方向</param>
     private void Dash(Vector3 dir)
     {
-        //_rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        _rb.AddForce(dir * _dashPower, ForceMode.Impulse);
+        _dashFlg = true;
+
+        RaycastHit hitObj;
+        bool hit = Physics.Raycast(_rayPos.transform.position, dir, out hitObj, _rayRange);
+
+        if (hit && hitObj.collider.gameObject.layer == _rayValue)
+        {
+            Debug.Log(hitObj.distance);
+            if (hitObj.distance < 0.8f)
+            {
+                return;
+            }
+            else
+            {
+                float b = _rayRange - hitObj.distance - 0.2f;
+                transform.position = transform.position + dir * b;
+            }
+        }
+        else
+        {
+            transform.position = transform.position + dir * _rayRange;
+        }
     }
 }
