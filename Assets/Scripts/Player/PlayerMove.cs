@@ -8,9 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField, Tooltip("ダッシュ力")] float _dashPower = 5.0f;
     [SerializeField, Tooltip("移動速度")] float _moveSpeed = 1.0f;
-    [SerializeField, Tooltip("ジャンプ力")] float _jumpPower = 5.0f;
 
     [SerializeField, Tooltip("カメラの位置")] Transform _aimPos;
     [SerializeField] AxisState _vertical;
@@ -23,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     bool _dashFlg;
     [SerializeField] Transform _rayPos;
-    [SerializeField] float _rayRange = 3.0f;
+    [SerializeField, Tooltip("ダッシュ距離")] float _rayRange = 3.0f;
     [SerializeField] int _rayValue;
 
     private void Awake()

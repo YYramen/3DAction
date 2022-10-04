@@ -13,9 +13,6 @@ public abstract class AfterImageBase : MonoBehaviour
     [SerializeField] protected Gradient _gradient = null;
     [SerializeField, ReadOnly] protected Material _material = null;
 
-    [Tooltip("何分前に食べたか")] float _eatTime = 5f;
-    [Tooltip("もう食べました")] bool _eat = true;
-
     protected int _baseColorID = -1;
 
     public float rate { get => _rate.Value; set => _rate.Value = Mathf.Clamp01(value); }
