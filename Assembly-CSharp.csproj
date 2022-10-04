@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageControllerBase.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageController.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\IAfterImageSetupParam.cs" />
+    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMeshController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Ground.shader" />
@@ -823,6 +829,21 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>Library\ScriptAssemblies\UniTask.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
