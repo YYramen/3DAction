@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8B41974B-1A7C-9D81-7AAA-B517040600BF}</ProjectGuid>
+    <ProjectGuid>{342D9D13-7E6C-A743-C710-6FE93ECAB8EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -856,7 +856,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniRx.csproj">
-      <Project>{96C9CBDA-2645-8CDA-54AC-70FE57809A92}</Project>
+      <Project>{CC081D7F-C6D5-7409-F1C6-C8E89A8D3F41}</Project>
       <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
