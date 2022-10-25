@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{342D9D13-7E6C-A743-C710-6FE93ECAB8EB}</ProjectGuid>
+    <ProjectGuid>{8B41974B-1A7C-9D81-7AAA-B517040600BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageController.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
@@ -856,7 +857,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniRx.csproj">
-      <Project>{CC081D7F-C6D5-7409-F1C6-C8E89A8D3F41}</Project>
+      <Project>{96C9CBDA-2645-8CDA-54AC-70FE57809A92}</Project>
       <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
