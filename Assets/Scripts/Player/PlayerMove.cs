@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField, Tooltip("移動速度")] float _moveSpeed = 1.0f;
 
+    [Header("視点移動")]
     [SerializeField, Tooltip("カメラの位置")] Transform _aimPos;
     [SerializeField] AxisState _vertical;
     [SerializeField] AxisState _horizontal;
@@ -20,7 +21,8 @@ public class PlayerMove : MonoBehaviour
     int _hashSide = Animator.StringToHash("Side");
 
     bool _dashFlg;
-    [SerializeField] Transform _rayPos;
+    [Header("ダッシュ機能")]
+    [SerializeField, Tooltip("Rayを飛ばす位置")] Transform _rayPos;
     [SerializeField, Tooltip("ダッシュ距離")] float _rayRange = 3.0f;
     [SerializeField] int _rayValue;
 
