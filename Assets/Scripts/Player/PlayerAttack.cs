@@ -61,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    //-----↓AnimationEventで使う関数（攻撃判定のオンオフ）↓-----//
     public void OnAttackOneCollider()
     {
         _colliders[0].SetActive(true);
