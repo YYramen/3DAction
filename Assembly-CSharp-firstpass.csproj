@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{342D9D13-7E6C-A743-C710-6FE93ECAB8EB}</ProjectGuid>
+    <ProjectGuid>{86A3A6A2-FBE7-1818-9FA4-2E3BD8A1FC6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.3.11f1</UnityVersion>
   </PropertyGroup>
@@ -56,23 +56,20 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageController.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAttackObj.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageControllerBase.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyHit.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMeshController.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\IAfterImageSetupParam.cs" />
-    <Compile Include="Assets\Scripts\Objects\HitEffect.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
-    <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Shaders\Ground.shader" />
+    <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.dll" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -863,10 +860,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{86A3A6A2-FBE7-1818-9FA4-2E3BD8A1FC6A}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="UniRx.csproj">
       <Project>{CC081D7F-C6D5-7409-F1C6-C8E89A8D3F41}</Project>
       <Name>UniRx</Name>

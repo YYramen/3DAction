@@ -71,4 +71,14 @@ public class PlayerAttack : MonoBehaviour
     {
         _colliders[0].SetActive(false);
     }
+
+    public void OnAttackTwoCollider()
+    {
+        _colliders[1].SetActive(true);
+    }
+
+    public void OffAttackTwoCollider()
+    {
+        _colliders[1].SetActive(false);
+    }
 }

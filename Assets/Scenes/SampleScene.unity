@@ -854,6 +854,32 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1304483041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1082731440014834617, guid: 54ad16fa71087524f9e6a5108cdbc087,
+    type: 3}
+  m_PrefabInstance: {fileID: 1082731440149628445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1304483048
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304483041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25ccf8064f2379949b776574f3b1ef6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1560720303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897543868}
   m_Layer: 0
-  m_Name: ==Enemy
+  m_Name: ==Enemy==
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1438,6 +1464,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1897543868}
     m_Modifications:
+    - target: {fileID: 1082731440014834615, guid: 54ad16fa71087524f9e6a5108cdbc087,
+        type: 3}
+      propertyPath: _hitEffect
+      value: 
+      objectReference: {fileID: 1957399617032166799, guid: 4374e8044b503e9488086ca2ce031b6e,
+        type: 3}
     - target: {fileID: 1082731440014834616, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_RootOrder

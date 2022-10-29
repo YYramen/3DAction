@@ -7,8 +7,17 @@ using UnityEngine;
 /// </summary>
 public class EnemyAttackObj : MonoBehaviour
 {
+
     private void Start()
     {
         Destroy(gameObject, 0.2f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("UŒ‚‚ğó‚¯‚½");
+        }
     }
 }
