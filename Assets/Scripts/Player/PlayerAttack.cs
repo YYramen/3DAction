@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     private void InputAttack()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Punch"))
         {
             _anim.SetTrigger("Attack");
         }
