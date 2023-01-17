@@ -24,7 +24,7 @@ public class EnemyHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //UŒ‚”»’è‚ÌƒŒƒCƒ„[‚É“–‚½‚Á‚½‚ç‰¹‚ğo‚·
-        if (other.gameObject.layer == 7) 
+        if (other.gameObject.layer == LayerMask.NameToLayer("Attack")) 
         {
             _audioSc.PlayOneShot(_hitClip);
             Instantiate(_hitEffect, other.transform.position, Quaternion.identity);
