@@ -11,9 +11,6 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Tooltip("攻撃１の効果音")] AudioClip _atkOneSe;
     [SerializeField, Tooltip("攻撃２の効果音")] AudioClip _atkTwoSe;
 
-    [Header("コンボ")]
-    [SerializeField, Tooltip("コンボ受付時間")] float _comboTime = 0.4f;
-
     [Header("攻撃時のコライダー")]
     [SerializeField, Tooltip("攻撃時のコライダー")] GameObject[] _colliders;
 
@@ -43,30 +40,10 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     private void InputAttack()
     {
-        if (Input.GetButtonDown("Fire1") && _attackOne == false)
+        if (Input.GetButtonDown("Fire1"))
         {
-            _attackOne = true;
-            _anim.SetTrigger("Attack1");
-            _audioSource.PlayOneShot(_atkOneSe);
-            Debug.Log("攻撃１");
+            _anim.SetTrigger("Attack");
         }
-        else if (Input.GetButtonDown("Fire1") && _attackOne == true)
-        {
-            _attackTwo = true;
-            _anim.SetTrigger("Attack2");
-            _audioSource.PlayOneShot(_atkTwoSe);
-            Debug.Log("攻撃２");
-        }
-        else
-        {
-            _attackOne = false;
-            _attackTwo = false;
-        }
-    }
-
-    bool ComboReception(bool attackNum)
-    {
-        return !attackNum;
     }
 
     //-----↓AnimationEventで使う関数（攻撃判定のオンオフ）↓-----//

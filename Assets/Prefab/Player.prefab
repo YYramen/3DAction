@@ -412,6 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _atkOneSe: {fileID: 8300000, guid: 25e4f108cefbdfa40a9a91e69f4c3f1f, type: 3}
   _atkTwoSe: {fileID: 8300000, guid: 6d849dc9930944540b706cc1993312b8, type: 3}
+  _comboTime: 0.4
   _colliders:
   - {fileID: 0}
   - {fileID: 0}
