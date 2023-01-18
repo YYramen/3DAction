@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 173
+  controlID: 47
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 164
+  controlID: 124
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 165
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,8 +242,8 @@ MonoBehaviour:
     y: 0
     width: 338
     height: 554
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 71
+  controlID: 125
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,8 +346,8 @@ MonoBehaviour:
     y: 0
     width: 567
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -387,7 +387,7 @@ MonoBehaviour:
     m_SaveData: []
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38680000
+    m_SelectedIDs: 
     m_LastClickedID: 26680
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
@@ -745,7 +745,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1ebff7fffa51ffff1453ffff2e54ffff7055ffffe26effffe8faffff50660000eafa000014fb000032fb000036fb00005afb000062fb000066fb00009afb0000b0fb0000b6fb0000c6fb0000dafb0000defb0000e2fb0000e6fb0000eefb000008fc00000cfc0000d44f0100fe4f0100445001004e5001009e500100a4500100ac500100b4500100b8500100d0500100d4500100dc500100f6500100fa500100
+      m_ExpandedIDs: e8faffff68840000b2840000b6840000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1006,9 +1006,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.7342176, y: 3.155673, z: -3.9204638}
+    m_Target: {x: -2.8028405, y: 1.3863978, z: -0.012357214}
     speed: 2
-    m_Value: {x: 2.7342176, y: 3.155673, z: -3.9204638}
+    m_Value: {x: -2.8028405, y: 1.3863978, z: -0.012357214}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1055,9 +1055,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.07232447, y: 0.4042955, z: -0.03210347, w: -0.91121393}
+    m_Target: {x: 0.17014521, y: -0.70723855, z: 0.18188757, w: 0.6616587}
     speed: 2
-    m_Value: {x: -0.072323486, y: 0.40429002, z: -0.032103036, w: -0.91120154}
+    m_Value: {x: 0.17014427, y: -0.7072347, z: 0.18188657, w: 0.66165507}
   m_Size:
     m_Target: 3.6808908
     speed: 2
@@ -1128,22 +1128,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Enemy
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Enemy
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: "C:\\Users\\yoshi\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\Projects\\3DAction"
+  m_LastProjectPath: "C:\\Users\\yoshi\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\Projects\\3DTest"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 24}
-    m_SelectedIDs: 44680000
-    m_LastClickedID: 26692
-    m_ExpandedIDs: 00000000446800008468000056d1000000dc000062040100760401009e040100d204010052170100c2360100dc360100525101005451010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 204}
+    m_SelectedIDs: a48b0000
+    m_LastClickedID: 35748
+    m_ExpandedIDs: 000000008486000086860000888600008a8600008c8600008e86000090860000928600009486000096860000988600009a8600009c8600006088000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1171,7 +1171,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000044680000
+    m_ExpandedIDs: 000000008486000086860000888600008a8600008c8600008e86000090860000928600009486000096860000988600009a8600009c860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1202,15 +1202,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300003a9e00005c9d000020770000327700008c040100dc0401005c04010086040100cc36010014db000038db0000beda000016510100f84c010076a1000022510100265101001a510100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Warrior Pack Bundle 1 FREE
-      m_OriginalName: Warrior Pack Bundle 1 FREE
+      m_Name: EnemyAttack
+      m_OriginalName: EnemyAttack
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 79580
+      m_UserData: 5620
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

@@ -9,6 +9,7 @@ public class EnemyAttack : MonoBehaviour
 {
     [Header("“GUŒ‚‚ÌƒvƒŒƒnƒu")]
     [SerializeField, Tooltip("“GUŒ‚‚ÌƒvƒŒƒnƒu")] GameObject _enemyAttackPrefab;
+    [SerializeField, Tooltip("UŒ‚‚ÌêŠ")] Transform _attackPos;
     [SerializeField, Tooltip("‰½•b‚¨‚«‚ÉUŒ‚‚·‚é‚©")] float _atkInterval = 2f;
     float _timer = 0f;
 
@@ -25,7 +26,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Attack()
     {
-        Instantiate(_enemyAttackPrefab, this.transform);
+        Instantiate(_enemyAttackPrefab,_attackPos.transform.position ,Quaternion.identity);
         Debug.Log("“G‚ÌUŒ‚");
     }
 }

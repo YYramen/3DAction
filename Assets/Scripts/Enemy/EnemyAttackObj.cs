@@ -13,11 +13,11 @@ public class EnemyAttackObj : MonoBehaviour
         Destroy(gameObject, 0.4f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("UŒ‚‚ğó‚¯‚½");
+            Debug.Log($"{other.name} ‚ªUŒ‚‚ğó‚¯‚½");
         }
     }
 }
