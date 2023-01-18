@@ -7,10 +7,10 @@ using UnityEngine;
 /// </summary>
 public class EnemyAttackObj : MonoBehaviour
 {
-
+    [SerializeField, Tooltip("オブジェクトの生存時間")]
     private void Start()
     {
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject, 0.4f);
     }
 
     private void OnCollisionEnter(Collision collision)
