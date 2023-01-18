@@ -412,14 +412,21 @@ ModelImporter:
       curves: []
       events:
       - time: 0.3677665
-        functionName: OnAttackTwoCollider
+        functionName: OnPunchTwoCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.3698073
+        functionName: PlayPunchTwoSound
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.49835026
-        functionName: OffAttackTwoCollider
+        functionName: OffPunchTwoCollider
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

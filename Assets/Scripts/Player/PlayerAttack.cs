@@ -8,14 +8,11 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [Header("効果音")]
-    [SerializeField, Tooltip("攻撃１の効果音")] AudioClip _atkOneSe;
-    [SerializeField, Tooltip("攻撃２の効果音")] AudioClip _atkTwoSe;
+    [SerializeField, Tooltip("パンチの効果音")] AudioClip[] _punchSounds;
+    [SerializeField, Tooltip("キックの効果音")] AudioClip[] _kickSounds;
 
     [Header("攻撃時のコライダー")]
     [SerializeField, Tooltip("攻撃時のコライダー")] GameObject[] _colliders;
-
-    bool _attackOne;
-    bool _attackTwo;
 
     Animator _anim;
     AudioSource _audioSource;
@@ -42,28 +39,107 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Punch"))
         {
-            _anim.SetTrigger("Attack");
+            _anim.SetTrigger("Punch");
+        }
+
+        if (Input.GetButtonDown("Kick"))
+        {
+            _anim.SetTrigger("Kick");
         }
     }
 
     //-----↓AnimationEventで使う関数（攻撃判定のオンオフ）↓-----//
-    public void OnAttackOneCollider()
+    #region パンチ
+    public void OnPunchOneCollider()
     {
         _colliders[0].SetActive(true);
     }
 
-    public void OffAttackOneCollider()
+    public void OffPunchOneCollider()
     {
         _colliders[0].SetActive(false);
     }
 
-    public void OnAttackTwoCollider()
+    public void OnPunchTwoCollider()
     {
         _colliders[1].SetActive(true);
     }
 
-    public void OffAttackTwoCollider()
+    public void OffPunchTwoCollider()
     {
         _colliders[1].SetActive(false);
     }
+
+    public void OnPunchThreeCollider()
+    {
+        _colliders[2].SetActive(true);
+    }
+
+    public void OffPunchThreeCollider()
+    {
+        _colliders[2].SetActive(false);
+    }
+
+    public void PlayPunchOneSound()
+    {
+        _audioSource.PlayOneShot(_punchSounds[0]);
+    }
+
+    public void PlayPunchTwoSound()
+    {
+        _audioSource.PlayOneShot(_punchSounds[1]);
+    }
+
+    public void PlayPunchThreeSound()
+    {
+        _audioSource.PlayOneShot(_punchSounds[2]);
+    }
+    #endregion
+
+    #region キック
+    public void OnKickOneCollider()
+    {
+        _colliders[3].SetActive(true);
+    }
+
+    public void OffKickOneCollider()
+    {
+        _colliders[3].SetActive(false);
+    }
+
+    public void OnKickTwoCollider()
+    {
+        _colliders[4].SetActive(true);
+    }
+
+    public void OffKickTwoCollider()
+    {
+        _colliders[4].SetActive(false);
+    }
+
+    public void OnKickThreeCollider()
+    {
+        _colliders[5].SetActive(true);
+    }
+
+    public void OffKickThreeCollider()
+    {
+        _colliders[5].SetActive(false);
+    }
+
+    public void PlayKickOneSound()
+    {
+        _audioSource.PlayOneShot(_kickSounds[0]);
+    }
+
+    public void PlayKickTwoSound()
+    {
+        _audioSource.PlayOneShot(_kickSounds[1]);
+    }
+
+    public void PlayKickThreeSound()
+    {
+        _audioSource.PlayOneShot(_kickSounds[2]);
+    }
+    #endregion
 }
