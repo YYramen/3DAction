@@ -931,6 +931,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1897543868}
     m_Modifications:
+    - target: {fileID: 820746648, guid: 54ad16fa71087524f9e6a5108cdbc087, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 1606463145988922908, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_Name
@@ -959,7 +963,7 @@ PrefabInstance:
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
@@ -969,7 +973,7 @@ PrefabInstance:
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
@@ -984,17 +988,27 @@ PrefabInstance:
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1606463145988922911, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1703780202900136268, guid: 54ad16fa71087524f9e6a5108cdbc087,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7424721050373211249, guid: 54ad16fa71087524f9e6a5108cdbc087,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084522479568460268, guid: 54ad16fa71087524f9e6a5108cdbc087,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ad16fa71087524f9e6a5108cdbc087, type: 3}
