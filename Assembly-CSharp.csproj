@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDetection.cs" />
+    <Compile Include="Assets\Scripts\CombatSystem\PlayerCombat.cs" />
+    <Compile Include="Assets\Scripts\CombatSystem\EnemyCombat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Ground.shader" />
