@@ -17,5 +17,52 @@ public class PlayerCombat : MonoBehaviour
     [Tooltip("パンチガードフラグ")] bool _pGuard;
     [Tooltip("キックガードフラグ")] bool _kGuard;
 
+    [Header("コライダー")]
+    [SerializeField, Tooltip("パンチのコライダー")] SphereCollider[] _punchColliders;
+    [SerializeField, Tooltip("キックのコライダー")] SphereCollider[] _kickColliders;
 
+
+    private void Update()
+    {
+        InputButton();
+    }
+
+    void InputButton()
+    {
+        if (Input.GetButton("PunchGuard"))
+        {
+            Debug.Log("パンチガード");
+            PunchGuard(_pGuard);
+        }
+        else if (Input.GetButton("KickGuard"))
+        {
+            Debug.Log("キックガード");
+            KickGuard(_kGuard);
+        }
+        else
+        {
+            _pGuard = false;
+            _kGuard = false;
+        }
+    }
+
+    void TakePunchAttack()
+    {
+
+    }
+
+    void TakeKickAttack()
+    {
+
+    }
+
+    void PunchGuard(bool punchGuardFlag)
+    {
+        punchGuardFlag = true;
+    }
+
+    void KickGuard(bool kickGuardFlag)
+    {
+        kickGuardFlag = true;
+    }
 }

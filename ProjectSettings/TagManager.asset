@@ -13,15 +13,15 @@ TagManager:
   - Water
   - UI
   - Wall
-  - Attack
-  - Enemy
+  - PlayerPunch
+  - EnemyPunch
   - DetectZone
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyKick
+  - PlayerKick
+  - PlayerPunchGuard
+  - PlayerKickGuard
+  - EnemyPunchGuard
+  - EnemyKickGuard
   - 
   - 
   - 

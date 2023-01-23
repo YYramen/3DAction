@@ -59,12 +59,15 @@
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttackObj.cs" />
+    <Compile Include="Assets\Scripts\CombatSystem\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageControllerBase.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHit.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyDetection.cs" />
+    <Compile Include="Assets\Scripts\CombatSystem\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMeshController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackAnimator.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
@@ -76,9 +79,6 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviors.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyDetection.cs" />
-    <Compile Include="Assets\Scripts\CombatSystem\PlayerCombat.cs" />
-    <Compile Include="Assets\Scripts\CombatSystem\EnemyCombat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Ground.shader" />

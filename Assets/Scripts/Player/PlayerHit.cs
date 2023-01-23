@@ -24,7 +24,7 @@ public class PlayerHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //UŒ‚”»’è‚ÌƒŒƒCƒ„[‚É“–‚½‚Á‚½‚ç‰¹‚ğo‚·
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyPunch") || other.gameObject.layer == LayerMask.NameToLayer("EnemyKick"))
         {
             _audioSc.PlayOneShot(_hitClip);
             Instantiate(_hitEffect, other.transform.position, Quaternion.identity);
