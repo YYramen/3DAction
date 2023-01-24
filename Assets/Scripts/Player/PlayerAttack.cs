@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Playerの戦闘関係
+/// Playerの基礎戦闘関係
 /// </summary>
 public class PlayerAttack : MonoBehaviour
 {
@@ -29,13 +29,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        InputAttack();
+        InputButton();
     }
 
     /// <summary>
     /// 入力を受け付ける
     /// </summary>
-    private void InputAttack()
+    private void InputButton()
     {
         if (Input.GetButtonDown("Punch"))
         {
@@ -46,6 +46,25 @@ public class PlayerAttack : MonoBehaviour
         {
             _anim.SetTrigger("Kick");
         }
+
+        if (Input.GetButton("PunchGuard"))
+        {
+            PlayerPunchGuard();
+        }
+        else if (Input.GetButton("KickGuard"))
+        {
+            PlayerKickGuard();
+        }
+    }
+
+    void PlayerPunchGuard()
+    {
+        Debug.Log("パンチガード");
+    }
+
+    void PlayerKickGuard()
+    {
+        Debug.Log("キックガード");
     }
 
     //-----↓AnimationEventで使う関数（攻撃判定のオンオフ）↓-----//

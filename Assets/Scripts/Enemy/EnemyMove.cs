@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
 
+/// <summary>
+/// 敵の動きを制御するコンポーネント
+/// </summary>
 public class EnemyMove : MonoBehaviour
 {
     [Header("移動")]
