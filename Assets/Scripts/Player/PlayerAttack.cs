@@ -37,24 +37,24 @@ public class PlayerAttack : MonoBehaviour
     /// </summary>
     private void InputButton()
     {
-        if (Input.GetButtonDown("Punch"))
-        {
-            _anim.SetTrigger("Punch");
-        }
+        //if (Input.GetButtonDown("Punch"))
+        //{
+        //    _anim.SetTrigger("Punch");
+        //}
 
-        if (Input.GetButtonDown("Kick"))
-        {
-            _anim.SetTrigger("Kick");
-        }
+        //if (Input.GetButtonDown("Kick"))
+        //{
+        //    _anim.SetTrigger("Kick");
+        //}
 
-        if (Input.GetButton("PunchGuard"))
-        {
-            PlayerPunchGuard();
-        }
-        else if (Input.GetButton("KickGuard"))
-        {
-            PlayerKickGuard();
-        }
+        //if (Input.GetButton("PunchGuard"))
+        //{
+        //    PlayerPunchGuard();
+        //}
+        //else if (Input.GetButton("KickGuard"))
+        //{
+        //    PlayerKickGuard();
+        //}
     }
 
     void PlayerPunchGuard()

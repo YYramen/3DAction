@@ -15,10 +15,10 @@ public class PlayerCombat : MonoBehaviour
     
     private void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            //AddInputs(Input.);
-        }
+        //if (Input.anyKeyDown)
+        //{
+        //    //AddInputs(Input.);
+        //}
     }
 
     void AddInputs(Input input)

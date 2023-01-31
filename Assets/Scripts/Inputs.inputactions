@@ -24,6 +24,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "43958d20-28a1-4161-83a9-da5c1378d0e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Punch",
                     "type": "Button",
                     "id": "43d9fabd-43b9-4dc9-b5ce-a5312346031a",
@@ -108,7 +117,7 @@
                 {
                     "name": "right",
                     "id": "d3e0fb89-1232-431a-bbb4-dc0cc34c608e",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -163,7 +172,7 @@
                 {
                     "name": "",
                     "id": "4a810a9d-a5e3-40fc-91d1-1914ebe67ee2",
-                    "path": "<Mouse>/delta",
+                    "path": "<Pointer>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -212,6 +221,17 @@
                     "processors": "",
                     "groups": "KeyBoardMouse",
                     "action": "KGuard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a807537-c991-44b0-8123-695a1fc6a400",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
