@@ -182,8 +182,52 @@
                 },
                 {
                     "name": "",
+                    "id": "2cb3556c-ff45-439f-966a-c7c222c945e0",
+                    "path": "<DualSenseGamepadHID>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualSence(PlayStation5 Controller)",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5793a773-ca70-45fd-9d29-802d7491db67",
+                    "path": "<SwitchProControllerHID>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Switch Pro Controller",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5629ebe-a0e2-4d69-96e1-c018f89cb92d",
+                    "path": "<XInputController>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XBox Controller",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89619695-8010-46cd-aedd-26ad14360134",
+                    "path": "<DualShockGamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation4 Controller",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a3356314-808b-4f26-9420-c138594fe44e",
-                    "path": "",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -193,8 +237,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b138c1b6-754b-42b0-8fc1-32fe53a268ca",
-                    "path": "",
+                    "id": "643f2e4d-1684-4f44-84a5-3f229eec2cb5",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -204,8 +248,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4cb6944e-5caf-4d88-bde9-38848c47b890",
-                    "path": "",
+                    "id": "97ef4304-1d19-40eb-9829-edeefcbced8a",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -216,7 +260,7 @@
                 {
                     "name": "",
                     "id": "1baa4be3-0b2c-4b85-a337-68c8be6acb0c",
-                    "path": "",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -232,34 +276,6 @@
                     "processors": "",
                     "groups": "KeyBoardMouse",
                     "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "UI",
-            "id": "a5ce1ef6-e2b4-4fb4-9d52-0c5525a45a70",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "6770d48a-1a53-45a6-bd95-79b2eb4fe9a9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "2bc1cedf-b82d-447f-8781-06f826189062",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoardMouse;DualSence(PlayStation5 Controller);Switch Pro Controller;XBox Controller;PlayStation4 Controller",
-                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
