@@ -77,12 +77,13 @@
     <Compile Include="Assets\Fighter Pack Bundle FREE\Code\FighterAnimationDemoFREE.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\IAfterImageSetupParam.cs" />
     <Compile Include="Assets\Scripts\Objects\HitEffect.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDash.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviors.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerDash.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttackWithInputSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Ground.shader" />

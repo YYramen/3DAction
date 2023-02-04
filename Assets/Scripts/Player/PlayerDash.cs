@@ -56,27 +56,5 @@ public class PlayerDash : MonoBehaviour
             }
             Debug.Log("AAA");
         }
-
-        //RaycastHit hitObj;
-        //bool hit = Physics.Raycast(_rayPos.transform.position, Vector3.forward, out hitObj, _rayRange);
-
-        //if (hit && hitObj.collider.gameObject.layer == _rayValue)
-        //{
-        //    Debug.Log(hitObj.distance);
-        //    if (hitObj.distance < 0.8f)
-        //    {
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        float b = _rayRange - hitObj.distance - 0.2f;
-        //        transform.position = transform.position + Vector3.forward * b;
-        //    }
-        //}
-        //else
-        //{
-        //    transform.position = transform.position + Vector3.forward * _rayRange;
-        //}
-        //Debug.Log("AAA");
     }
 }

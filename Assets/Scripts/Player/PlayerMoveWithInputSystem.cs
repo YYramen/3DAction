@@ -38,7 +38,7 @@ public class PlayerMoveWithInputSystem : MonoBehaviour
         if (context.action.name != "Move")
             return;
         Vector2 inputMove = context.ReadValue<Vector2>();
-        _movement = new Vector3(inputMove.x, 0, inputMove.y);
+        _movement = new Vector3(inputMove.y, 0, inputMove.x * - 1);
     }
 
     void Update()

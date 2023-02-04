@@ -38,7 +38,7 @@
                     "id": "43d9fabd-43b9-4dc9-b5ce-a5312346031a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -47,7 +47,7 @@
                     "id": "acff1711-bf3c-46bd-9f31-e87d0f4d3674",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -272,7 +272,7 @@
                     "name": "",
                     "id": "6a807537-c991-44b0-8123-695a1fc6a400",
                     "path": "<Keyboard>/shift",
-                    "interactions": "",
+                    "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
                     "action": "Dash",
