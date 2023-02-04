@@ -42,6 +42,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "RightDash",
+                    "type": "Button",
+                    "id": "87ccccd4-1992-4288-93db-5dd626a99013",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftDash",
+                    "type": "Button",
+                    "id": "f3617eeb-a862-405f-a981-10bf6b7b52b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Punch",
                     "type": "Button",
                     "id": "43d9fabd-43b9-4dc9-b5ce-a5312346031a",
@@ -336,6 +354,28 @@
                     "processors": "",
                     "groups": "KeyBoardMouse",
                     "action": "BackDash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3b7cbd8-575b-4317-b847-aeb4d75044cb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "RightDash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a75ab3a2-9d31-472a-9cba-daf006fa2af7",
+                    "path": "<Keyboard>/s",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "LeftDash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

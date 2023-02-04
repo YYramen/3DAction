@@ -12,7 +12,7 @@ public class PlayerMoveWithInputSystem : MonoBehaviour
 
     [Header("éQè∆óp")]
     [SerializeField] PlayerInput _playerInput;
-    
+
     Animator _anim;
     Rigidbody _rb;
     Vector3 _movement;
@@ -38,7 +38,7 @@ public class PlayerMoveWithInputSystem : MonoBehaviour
         if (context.action.name != "Move")
             return;
         Vector2 inputMove = context.ReadValue<Vector2>();
-        _movement = new Vector3(inputMove.y, 0, inputMove.x * - 1);
+        _movement = new Vector3(inputMove.y, 0, inputMove.x * -1);
     }
 
     void Update()
