@@ -24,12 +24,21 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
+                    "name": "FrontDash",
                     "type": "Button",
                     "id": "43958d20-28a1-4161-83a9-da5c1378d0e5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BackDash",
+                    "type": "Button",
+                    "id": "4b5e9514-a5ed-4beb-97e6-efa14e3e813f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
                     "initialStateCheck": false
                 },
                 {
@@ -38,7 +47,25 @@
                     "id": "43d9fabd-43b9-4dc9-b5ce-a5312346031a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "Press(pressPoint=0.5)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Punch2",
+                    "type": "Button",
+                    "id": "1a43439b-2294-4fdf-b0a3-10cb3b8082a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Punch3",
+                    "type": "Button",
+                    "id": "4a77e797-ec98-4438-8b85-8ac3c0c707c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap(tapCount=3)",
                     "initialStateCheck": false
                 },
                 {
@@ -271,11 +298,44 @@
                 {
                     "name": "",
                     "id": "6a807537-c991-44b0-8123-695a1fc6a400",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Keyboard>/a",
                     "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
-                    "action": "Dash",
+                    "action": "FrontDash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19683b1a-8251-46ed-8b5b-4833b3dd315e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "Punch2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f823e33-8639-4f11-aa0e-8aacdc06eb2a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "Punch3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc069420-f2fa-4dd3-900a-94209bd2a649",
+                    "path": "<Keyboard>/d",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "KeyBoardMouse",
+                    "action": "BackDash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
