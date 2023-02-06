@@ -316,7 +316,7 @@
                 {
                     "name": "",
                     "id": "6a807537-c991-44b0-8123-695a1fc6a400",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/d",
                     "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -349,7 +349,7 @@
                 {
                     "name": "",
                     "id": "bc069420-f2fa-4dd3-900a-94209bd2a649",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/a",
                     "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -360,7 +360,7 @@
                 {
                     "name": "",
                     "id": "c3b7cbd8-575b-4317-b847-aeb4d75044cb",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/s",
                     "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
@@ -371,7 +371,7 @@
                 {
                     "name": "",
                     "id": "a75ab3a2-9d31-472a-9cba-daf006fa2af7",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/w",
                     "interactions": "MultiTap",
                     "processors": "",
                     "groups": "KeyBoardMouse",
