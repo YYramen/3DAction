@@ -247,13 +247,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606463145988922908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e28e397da1a33a34e8104dea816f875d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyAttackPrefab: {fileID: 8193598792763458942, guid: cfca2e01f980c5c4da0c536bfbeeedf2,
-    type: 3}
+  _enemyAttackPrefab:
+  - {fileID: 8193598792763458942, guid: cfca2e01f980c5c4da0c536bfbeeedf2, type: 3}
+  - {fileID: 7556821075943539506, guid: f2cafe8a29106ef47b3077c93ad6a8ec, type: 3}
   _attackPos: {fileID: 3892864952612794543}
   _atkInterval: 2
 --- !u!114 &7424721050373211249
@@ -263,16 +264,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606463145988922908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a23f70b6172a0a54eb2dad605c511e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerPos: {fileID: 0}
   _wayPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   _moveSpeed: 3.5
+  _enemyDetection: {fileID: 0}
 --- !u!114 &5809084442989775092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +297,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606463145988922908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -323,7 +326,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1703780202900136268
 GameObject:
@@ -335,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 606360819335937516}
   - component: {fileID: 7862199032178150868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DetectZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

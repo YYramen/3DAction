@@ -4,12 +4,15 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// 攻撃範囲内にプレイヤーがいるかどうかを検知するクラス
+/// </summary>
 public class EnemyDetection : MonoBehaviour
 {
-    [Header("探知範囲")]
-    [SerializeField, Tooltip("探知範囲(片側の角度)")] float _detectZone;
-    [SerializeField, Tooltip("探知範囲のコライダー")] SphereCollider _detectCollider;
-    [Tooltip("敵を見つけたかどうか")] bool _isDetected;
+    [Header("攻撃を行う範囲")]
+    [SerializeField, Tooltip("範囲(片側の角度)")] float _detectZone;
+    [SerializeField, Tooltip("範囲のコライダー")] SphereCollider _detectCollider;
+    [Tooltip("攻撃範囲内にプレイヤーがいるかどうか")] bool _isDetected;
     [Tooltip("見つけたオブジェクトの位置")] Vector3 _detectedObjectPos;
 
     public bool IsDetected { get => _isDetected;}
