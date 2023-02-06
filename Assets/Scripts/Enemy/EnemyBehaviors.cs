@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum BehaviorType
 {
-    Root,
-    Serch,
+    Idle,
+    Defence,
     Attack,
     Run,
 }
