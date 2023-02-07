@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyAttackObj.cs" />
     <Compile Include="Assets\Scripts\CombatSystem\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyStatus.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestPlayerController.cs" />
@@ -84,7 +83,7 @@
     <Compile Include="Assets\Scripts\Objects\HitEffect.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerDash.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHit.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyBehaviors.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBrain.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestTurnLeftCommand.cs" />
@@ -97,6 +96,11 @@
     <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\KickPunchComboCommand.cs" />
     <Compile Include="Assets\Scripts\Player\Commands\InputCommandHandler.cs" />
     <Compile Include="Assets\Scripts\Player\Commands\CommandInvoker.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyGoalBase.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\CompositeEnemyGoal.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlannerBase.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlanner.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlan\EnemyPlanBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

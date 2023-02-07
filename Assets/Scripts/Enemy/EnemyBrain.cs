@@ -22,9 +22,10 @@ public enum EnemyLevel
     Hard = 3
 }
 
-public class EnemyBehaviors : MonoBehaviour
+public class EnemyBrain : MonoBehaviour
 {
     [Tooltip("åªç›ÇÃBehaviorType")] EnemyBehaviorType _currentType;
+
 
     public void SwitchType(EnemyBehaviorType type)
     {

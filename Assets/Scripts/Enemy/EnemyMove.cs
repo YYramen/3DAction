@@ -19,17 +19,17 @@ public class EnemyMove : MonoBehaviour
     /// <summary>
     /// "‚Ù‚Ú"‰½‚à‚µ‚È‚¢
     /// </summary>
-    private void Idle()
+    public void Idle()
     {
-
+        Debug.Log($"{this.gameObject.name} ‚ÍŒ»İIdleó‘Ô");
     }
 
     /// <summary>
     /// UŒ‚“I‚É“®‚­
     /// </summary>
-    private void OffenciveMove()
+    public void OffensiveMove()
     {
-        
+        Debug.Log($"{this.gameObject.name} ‚ÍŒ»İOffensiveó‘Ô");
     }
 
     /// <summary>
@@ -37,6 +37,6 @@ public class EnemyMove : MonoBehaviour
     /// </summary>
     private void DefenciveMove()
     {
-
+        Debug.Log($"{this.gameObject.name} ‚ÍŒ»İDefenciveó‘Ô");
     }
 }
