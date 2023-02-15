@@ -106,7 +106,6 @@ public class EnemyGoalBase<T> : IGoal
     /// <summary>
     /// ‰º“ñ‚Â‚ÌŠÖ”‚ÍƒS[ƒ‹‚ÌŒã¬Œ÷E¸”s‚ÉŠÖ‚í‚ç‚¸ˆ—‚³‚ê‚éŠÖ”
     /// </summary>
-
     public virtual void AddSubgoal(IGoal subgoal)
     {
         // add subgoal

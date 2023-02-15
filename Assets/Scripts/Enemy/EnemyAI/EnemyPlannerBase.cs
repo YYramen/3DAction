@@ -54,7 +54,7 @@ public class EnemyPlannerBase : IPlanner
     /// プランを評価する
     /// </summary>
     /// <param name="plan">評価対象のプラン</param>
-    /// <returns>オーナーの現在の状態を加味したプランに応じた報酬見込み値</returns>
+    /// <returns>Rewardの見込み値</returns>
     public virtual float EvaluatePlan(EnemyPlanBase plan)
     {
         return 0f;

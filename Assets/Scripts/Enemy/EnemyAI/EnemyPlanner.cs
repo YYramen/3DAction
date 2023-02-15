@@ -13,8 +13,12 @@ public class EnemyPlanner : EnemyPlannerBase
     {
         float value = 0;
 
-        //if(plan)
+        //if (plan)
+        {
+
+        }
         // TODO : EnemyPlanBaseƒNƒ‰ƒX‚ğì‚ë‚¤
+               // İŒv‚©‚ç‚â‚è’¼‚µ‚Ä‚à—Ç‚¢‚©‚à‚µ‚ê‚È‚¢  
 
         return value;
     }
