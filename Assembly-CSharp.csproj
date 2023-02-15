@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Player\Commands\InputCommandHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\CompositeEnemyGoal.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttackObj.cs" />
     <Compile Include="Assets\Scripts\CombatSystem\EnemyCombat.cs" />
@@ -68,39 +70,40 @@
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageControllerBase.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHit.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackWithInputSystem.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\CommandInvoker.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestInvoker.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDetection.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlan\EnemyPlanBase.cs" />
     <Compile Include="Assets\Scripts\CombatSystem\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMoveWithInputSystem.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestTurnRightCommand.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlannerBase.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMeshController.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestICommand.cs" />
     <Compile Include="Assets\Scripts\Player\AttackAnimator.cs" />
     <Compile Include="Assets\Scripts\Player\Not Use\PlayerMove.cs" />
     <Compile Include="Assets\Fighter Pack Bundle FREE\Code\CameraControl.cs" />
     <Compile Include="Assets\Fighter Pack Bundle FREE\Code\FighterAnimationDemoFREE.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\DoublePunchCommand.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\IAfterImageSetupParam.cs" />
     <Compile Include="Assets\Scripts\Objects\HitEffect.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerDash.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\PunchKickComboCommand.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBrain.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\PlayerCommandController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyGoalBase.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\KickPunchComboCommand.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
+    <Compile Include="Assets\Scripts\Player\Commands\ICommand.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlanner.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestTurnLeftCommand.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestInputHandler.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\ICommand.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\PlayerCommandController.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\DoublePunchCommand.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\PunchKickComboCommand.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\KickPunchComboCommand.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\InputCommandHandler.cs" />
-    <Compile Include="Assets\Scripts\Player\Commands\CommandInvoker.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyGoalBase.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI\CompositeEnemyGoal.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlannerBase.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlanner.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI\EnemyPlan\EnemyPlanBase.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NewEnemyAI\NewEnemyStatus.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NewEnemyAI\NewEnemyMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NewEnemyAI\NewEnemyTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
