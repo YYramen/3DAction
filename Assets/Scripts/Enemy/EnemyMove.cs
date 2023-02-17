@@ -39,4 +39,4 @@ public class EnemyMove : MonoBehaviour
     {
         Debug.Log($"{this.gameObject.name} ‚ÍŒ»İDefenciveó‘Ô");
     }
-}
+} 

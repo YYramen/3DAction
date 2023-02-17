@@ -34,31 +34,31 @@ public interface IGoal
 /// <summary>
 /// ゴールの基底クラス
 /// </summary>
-public class EnemyGoalBase<T> : IGoal
+public class EnemyGoalBase<T> where T : IGoal
 {
     protected T _owner;
 
     [Tooltip("現在の状態")] internal EnemyGoalStatus _currentStatus = EnemyGoalStatus.Inactive;
 
-    /// <summary>
-    /// 非アクティブかどうか
-    /// </summary>
-    public bool IsInactive { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
+    ///// <summary>
+    ///// 非アクティブかどうか
+    ///// </summary>
+    //public bool IsInactive { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
 
-    /// <summary>
-    /// アクティブか
-    /// </summary>
-    public bool IsActive { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
+    ///// <summary>
+    ///// アクティブか
+    ///// </summary>
+    //public bool IsActive { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
 
-    /// <summary>
-    /// ゴールを達成しているかどうか
-    /// </summary>
-    public bool IsCompleted { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
+    ///// <summary>
+    ///// ゴールを達成しているかどうか
+    ///// </summary>
+    //public bool IsCompleted { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
 
-    /// <summary>
-    /// ゴールを達成できなかったかどうか
-    /// </summary>
-    public bool HasFailed { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
+    ///// <summary>
+    ///// ゴールを達成できなかったかどうか
+    ///// </summary>
+    //public bool HasFailed { get { return _currentStatus == EnemyGoalStatus.Inactive; } }
 
     public EnemyGoalBase(T owner)
     {
@@ -70,7 +70,7 @@ public class EnemyGoalBase<T> : IGoal
     /// </summary>
     internal void ActivateIfInactive()
     {
-        if (IsInactive)
+        if (_owner.IsInactive)
         {
             Activate();
         }
@@ -81,10 +81,10 @@ public class EnemyGoalBase<T> : IGoal
     /// </summary>
     protected void ReactivateIfFailed()
     {
-        if (HasFailed)
-        {
-            _currentStatus = EnemyGoalStatus.Inactive;
-        }
+        //if (HasFailed)
+        //{
+        //    _currentStatus = EnemyGoalStatus.Inactive;
+        //}
     }
 
     /// <summary>

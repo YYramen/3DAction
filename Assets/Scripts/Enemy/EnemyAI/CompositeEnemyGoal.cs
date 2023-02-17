@@ -6,14 +6,21 @@ using UnityEngine;
 /// サブゴールを束ねる親ゴール
 /// </summary>
 
-public class CompositeEnemyGoal<T> : EnemyGoalBase<T>
+public class CompositeEnemyGoal : EnemyGoalBase<IGoal>
 {
     [Tooltip("サブゴールのリスト")] protected List<IGoal> _subgoalList = new List<IGoal>();
+
+    protected new IGoal _owner;
+
+    public CompositeEnemyGoal(IGoal owner) : base(owner)
+    {
+        _owner = owner;
+    }
 
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    public CompositeEnemyGoal(T owner) : base(owner) { }
+
 
     public override EnemyGoalStatus Process()
     {
