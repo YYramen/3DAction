@@ -28,16 +28,16 @@ public class EnemyMovementBase
     /// <summary>
     /// 報酬リスト
     /// </summary>
-    public List<Reward> RewardProspects { get; protected set; }
+    public List<Rewards> RewardProspects { get; protected set; }
 
 
     #region コンストラクタ
 
     public EnemyMovementBase() { }
 
-    public EnemyMovementBase(GoalType goalType) : this(goalType, new List<Reward>()) { }
+    public EnemyMovementBase(GoalType goalType) : this(goalType, new List<Rewards>()) { }
 
-    public EnemyMovementBase(GoalType goalType, List<Reward> rewards)
+    public EnemyMovementBase(GoalType goalType, List<Rewards> rewards)
     {
         GoalType = goalType;
         RewardProspects = rewards;
@@ -55,31 +55,31 @@ public class PlanWander : EnemyMovementBase
 }
 
 /// <summary>
-/// パワーを得る
+/// 攻撃
 /// </summary>
 public class PlanGetPower : EnemyMovementBase
 {
-    public PlanGetPower() : base(GoalType.GetPower)
+    public PlanGetPower() : base(GoalType.Defence)
     {
-        var reward = new Reward(RewardType.Power, 0.1f);
+        var reward = new Rewards(RewardType.Power, 0.1f);
         RewardProspects.Add(reward);
     }
 }
 
 /// <summary>
-/// エネルギーを得る
+/// 防御
 /// </summary>
 public class PlanGetEnergy : EnemyMovementBase
 {
-    public PlanGetEnergy() : base(GoalType.GetEnergy)
+    public PlanGetEnergy() : base(GoalType.Attack)
     {
-        var reward = new Reward(RewardType.Enegy, 0.1f);
+        var reward = new Rewards(RewardType.Enegy, 0.1f);
         RewardProspects.Add(reward);
     }
 }
 
 public class PlanAttackTarget : EnemyMovementBase
 {
-    public PlanAttackTarget() : base(GoalType.Attack, new List<Reward>()) { }
+    public PlanAttackTarget() : base(GoalType.Attack, new List<Rewards>()) { }
 }
 
