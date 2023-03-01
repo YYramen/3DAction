@@ -12,7 +12,7 @@ using UnityEngine;
 public class EnemyAIBase : MonoBehaviour
 {
     
-    private Brain<AIBase> _brain;
+    private TaskCalculate<EnemyAIBase> _taskCalc;
 
     [SerializeField]
     private Transform[] _wanderTargets;
@@ -62,20 +62,20 @@ public class EnemyAIBase : MonoBehaviour
     /// 対象がプランオブジェクトを保持しているかを検証
     /// </summary>
     /// <param name="target">検証対象</param>
-    /// <param name="planObject">取得したプランオブジェクトの参照を返す</param>
+    /// <param name="movementObject">取得したプランオブジェクトの参照を返す</param>
     /// <returns>保持している場合はture</returns>
-    protected virtual bool HasPlan(GameObject target, out PlanObject planObject)
+    protected virtual bool HasPlan(GameObject target, out MovementObject movementObject)
     {
-        planObject = target.GetComponent<PlanObject>();
-        return planObject != null;
+        movementObject = target.GetComponent<MovementObject>();
+        return movementObject != null;
     }
 
     /// <summary>
     /// プランオブジェクトを保持する（記憶する）
     /// </summary>
-    /// <param name="planObject"></param>
-    void StorePlanObject(PlanObject planObject)
+    /// <param name="movementObject"></param>
+    void StorePlanObject(MovementObject movementObject)
     {
-        _brain.Memorize(planObject);
+        _taskCalc.Memorize(movementObject);
     }
 }

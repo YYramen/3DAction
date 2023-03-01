@@ -9,22 +9,23 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     private ICharacter _planner;
 
     // 現在選択されているプラン
-    private PlanBase _currentPlan;
+    private EnemyMovementBase _currentPlan;
 
     // 短期記憶しているオブジェクトを保持
-    private List<Memory> _shortMemories = new List<Memory>();
+    private List<EnemyMovementBase> _shortMemories = new List<EnemyMovementBase>();
 
     // 長期記憶しているオブジェクトを保持
-    private List<Memory> _longMemories = new List<Memory>();
+    private List<EnemyMovementBase> _longMemories = new List<EnemyMovementBase>();
+
 
     /// <summary>
     /// 記憶しているすべてのオブジェクトを返す
     /// </summary>
-    private List<Memory> AllMemories
+    private List<EnemyMovementBase> AllMemories
     {
         get
         {
-            List<Memory> allMemories = new List<Memory>();
+            List<EnemyMovementBase> allMemories = new List<EnemyMovementBase>();
             allMemories.AddRange(_shortMemories);
             allMemories.AddRange(_longMemories);
             return allMemories;
@@ -34,12 +35,12 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     #region Constructor
 
     // コンストラクタ
-    public Brain(T owner) : base(owner)
+    public TaskCalculate(T owner) : base(owner)
     {
         // NOTE:
         // 他キャラのAIを作成する場合はBrainの派生クラスを作成し、
         // そちらのコンストラクタ内で、生成するプランナーを変更する
-        _planner = new CharaPlanner(owner);
+        _planner = new EnemyPersonality(owner);
     }
 
     #endregion
@@ -51,7 +52,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// プランを記憶に保持
     /// </summary>
     /// <param name="planObject"></param>
-    public void Memorize(PlanObject planObject)
+    public void Memorize(MovementObject planObject)
     {
         // 重複しているプランは追加しない
         if (HasMemory(planObject))
@@ -85,9 +86,9 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// プランリストから最適なプランを評価、取得する
     /// </summary>
     /// <returns></returns>
-    PlanBase EvaluatePlans()
+    EnemyMovementBase EvaluatePlans()
     {
-        List<PlanBase> plans = EnumeratePlans();
+        List<EnemyMovementBase> plans = EnumeratePlans();
         return _planner.Evaluate(plans);
     }
 
@@ -95,9 +96,9 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// 短期・長期記憶双方に保持しているプランを列挙する
     /// </summary>
     /// <returns></returns>
-    List<PlanBase> EnumeratePlans()
+    List<EnemyMovementBase> EnumeratePlans()
     {
-        var plans = new List<PlanBase>();
+        var plans = new List<EnemyMovementBase>();
         foreach (var m in AllMemories)
         {
             plans.Add(m.Plan);
@@ -110,7 +111,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// </summary>
     /// <param name="plan"></param>
     /// <returns></returns>
-    ITask GetGoalByPlan(PlanBase plan)
+    ITask GetGoalByPlan(EnemyMovementBase plan)
     {
         switch (plan.GoalType)
         {
@@ -120,9 +121,8 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
                     return new GoalWander<T>(_owner);
                 }
 
-            // エネルギー／パワーを得る
-            case GoalType.GetEnergy:
-            case GoalType.GetPower:
+            // 防御
+            case GoalType.Defence:
                 {
                     var memory = FindMemory(plan);
                     return new GoalGetItem<T>(_owner, memory.Target);
@@ -136,14 +136,14 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
                 }
         }
 
-        return new Goal<T>(_owner);
+        return new Task<T>(_owner);
     }
 
     /// <summary>
     /// 選択中のプランからプランを変更する
     /// </summary>
     /// <param name="newPlan"></param>
-    void ChangePlan(PlanBase newPlan)
+    void ChangePlan(EnemyMovementBase newPlan)
     {
         Debug.Log("Change plan to " + newPlan);
 
@@ -157,16 +157,16 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// <summary>
     /// プランオブジェクトからメモリオブジェクトを生成する
     /// </summary>
-    Memory MakeMemory(PlanObject planObject)
+    EnemyMovementBase MakeMemory(MovementObject movementObject)
     {
-        var memory = new Memory(planObject);
+        var memory = new EnemyMovementBase(movementObject);
         return memory;
     }
 
     /// <summary>
     /// 対象プランから記憶オブジェクトを検索
     /// </summary>
-    Memory FindMemory(PlanBase plan)
+    EnemyMovementBase FindMemory(EnemyMovementBase plan)
     {
         return AllMemories.Find(m => m.Plan == plan);
     }
@@ -174,16 +174,16 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// <summary>
     /// 記憶にあるプランか
     /// </summary>
-    bool HasMemory(PlanObject planObject)
+    bool HasMemory(MovementObject movementObject)
     {
-        var memory = AllMemories.Find(m => m.Plan == planObject.Plan);
+        var memory = AllMemories.Find(m => m.Plan == movementObject.Plan);
         return memory != null;
     }
 
     /// <summary>
     /// 記憶にあるメモリか
     /// </summary>
-    bool HasMemory(Memory memory)
+    bool HasMemory(EnemyMovementBase memory)
     {
         var storeMem = AllMemories.Find(m => m == memory);
         return storeMem != null;
@@ -201,7 +201,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
         RemoveAllSubgoals();
 
         // なにもないときにあたりを歩き回るプランを設定しておく
-        var memory = new Memory();
+        var memory = new EnemyMovementBase();
         memory.Plan = new PlanWander();
 
         _longMemories.Add(memory);
@@ -211,7 +211,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     {
         ActivateIfInactive();
 
-        PlanBase selectedPlan = EvaluatePlans();
+        EnemyMovementBase selectedPlan = EvaluatePlans();
         bool needsChangePlan = (selectedPlan != null) && (_currentPlan != selectedPlan);
         if (needsChangePlan)
         {
