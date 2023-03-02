@@ -116,7 +116,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     {
         switch (movements.MovementType)
         {
-            // ‚ ‚½‚è‚ğ’T‚µ‰ñ‚é
+            // ‚¤‚ë‚Â‚­
             case MovementType.Wander:
                 {
                     return new GoalWander<T>(_owner);
@@ -129,11 +129,11 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
                     return new GoalGetItem<T>(_owner, memory.Target);
                 }
 
-            // “G‚ğUŒ‚
+            // ƒvƒŒƒCƒ„[‚ğUŒ‚
             case MovementType.Attack:
                 {
                     var memory = FindMemory(movements);
-                    return new GoalAttackTarget<T>(_owner, memory.Target);
+                    return new EnemyAttackTask<T>(_owner, memory.Target, memory.Position);
                 }
         }
 
