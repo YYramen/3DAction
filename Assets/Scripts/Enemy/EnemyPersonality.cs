@@ -23,16 +23,16 @@ public class EnemyPersonality : EnemyCharacterBase<EnemyAIBase>
         float value = 0f;
 
         // 攻撃プランの場合は、オーナーの状態を見て攻撃に転じるかを判断する
-        if (plan.GoalType == GoalType.Attack)
+        if (plan.MovementType == MovementType.Attack)
         {
             // パワーがない場合は攻撃できない
-            if (_owner.AttackPower == 0.0f)
+            if (_owner.Health == 0.0f)
             {
                 return 0f;
             }
 
             value += Mathf.Pow(_owner.Energy, 2f);
-            value += Mathf.Pow(_owner.AttackPower, 1.5f);
+            value += Mathf.Pow(_owner.Health, 1.5f);
             return value;
         }
 
@@ -45,7 +45,7 @@ public class EnemyPersonality : EnemyCharacterBase<EnemyAIBase>
                     break;
 
                 case RewardType.Power:
-                    value += Mathf.Pow(1f - _owner.AttackPower, 3f) * reward.Value;
+                    value += Mathf.Pow(1f - _owner.Health, 3f) * reward.Value;
                     break;
             }
         }

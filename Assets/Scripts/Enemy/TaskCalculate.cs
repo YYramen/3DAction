@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
 {
@@ -12,20 +13,20 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     private EnemyMovementBase _currentPlan;
 
     // 短期記憶しているオブジェクトを保持
-    private List<EnemyMovementBase> _shortMemories = new List<EnemyMovementBase>();
+    private List<MovementMemory> _shortMemories = new List<MovementMemory>();
 
     // 長期記憶しているオブジェクトを保持
-    private List<EnemyMovementBase> _longMemories = new List<EnemyMovementBase>();
+    private List<MovementMemory> _longMemories = new List<MovementMemory>();
 
 
     /// <summary>
     /// 記憶しているすべてのオブジェクトを返す
     /// </summary>
-    private List<EnemyMovementBase> AllMemories
+    private List<MovementMemory> AllMemories
     {
         get
         {
-            List<EnemyMovementBase> allMemories = new List<EnemyMovementBase>();
+            List<MovementMemory> allMemories = new List<MovementMemory>();
             allMemories.AddRange(_shortMemories);
             allMemories.AddRange(_longMemories);
             return allMemories;
@@ -83,55 +84,55 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     #region Private members
 
     /// <summary>
-    /// プランリストから最適なプランを評価、取得する
+    /// 行動リストから最適な行動を評価、取得する
     /// </summary>
     /// <returns></returns>
-    EnemyMovementBase EvaluatePlans()
+    EnemyMovementBase EvaluateMovements()
     {
-        List<EnemyMovementBase> plans = EnumeratePlans();
+        List<EnemyMovementBase> plans = EnumerateMovements();
         return _planner.Evaluate(plans);
     }
 
     /// <summary>
-    /// 短期・長期記憶双方に保持しているプランを列挙する
+    /// 短期・長期記憶双方に保持している行動を列挙する
     /// </summary>
     /// <returns></returns>
-    List<EnemyMovementBase> EnumeratePlans()
+    List<EnemyMovementBase> EnumerateMovements()
     {
         var plans = new List<EnemyMovementBase>();
         foreach (var m in AllMemories)
         {
-            plans.Add(m.Plan);
+            plans.Add(m.Movement);
         }
         return plans;
     }
 
     /// <summary>
-    /// プランに応じてゴールを選択する
+    /// 行動に応じてゴールを選択する
     /// </summary>
-    /// <param name="plan"></param>
+    /// <param name="movements"></param>
     /// <returns></returns>
-    ITask GetGoalByPlan(EnemyMovementBase plan)
+    ITask GetTaskByMovements(EnemyMovementBase movements)
     {
-        switch (plan.GoalType)
+        switch (movements.MovementType)
         {
             // あたりを探し回る
-            case GoalType.Wander:
+            case MovementType.Wander:
                 {
                     return new GoalWander<T>(_owner);
                 }
 
             // 防御
-            case GoalType.Defence:
+            case MovementType.Defence:
                 {
-                    var memory = FindMemory(plan);
+                    var memory = FindMemory(movements);
                     return new GoalGetItem<T>(_owner, memory.Target);
                 }
 
             // 敵を攻撃
-            case GoalType.Attack:
+            case MovementType.Attack:
                 {
-                    var memory = FindMemory(plan);
+                    var memory = FindMemory(movements);
                     return new GoalAttackTarget<T>(_owner, memory.Target);
                 }
         }
@@ -142,33 +143,33 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// <summary>
     /// 選択中のプランからプランを変更する
     /// </summary>
-    /// <param name="newPlan"></param>
-    void ChangePlan(EnemyMovementBase newPlan)
+    /// <param name="newMovements"></param>
+    void ChangePlan(EnemyMovementBase newMovements)
     {
-        Debug.Log("Change plan to " + newPlan);
+        Debug.Log("Change plan to " + newMovements);
 
-        _currentPlan = newPlan;
+        _currentPlan = newMovements;
         RemoveAllSubgoals();
 
-        var goal = GetGoalByPlan(newPlan);
+        var goal = GetTaskByMovements(newMovements);
         AddSubgoal(goal);
     }
 
     /// <summary>
     /// プランオブジェクトからメモリオブジェクトを生成する
     /// </summary>
-    EnemyMovementBase MakeMemory(MovementObject movementObject)
+    MovementMemory MakeMemory(MovementObject movementObject)
     {
-        var memory = new EnemyMovementBase(movementObject);
+        var memory = new MovementMemory(movementObject);
         return memory;
     }
 
     /// <summary>
     /// 対象プランから記憶オブジェクトを検索
     /// </summary>
-    EnemyMovementBase FindMemory(EnemyMovementBase plan)
+    MovementMemory FindMemory(EnemyMovementBase movements)
     {
-        return AllMemories.Find(m => m.Plan == plan);
+        return AllMemories.Find(m => m.Movement == movements);
     }
 
     /// <summary>
@@ -176,14 +177,14 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     /// </summary>
     bool HasMemory(MovementObject movementObject)
     {
-        var memory = AllMemories.Find(m => m.Plan == movementObject.Plan);
+        var memory = AllMemories.Find(m => m.Movement == movementObject.Movement);
         return memory != null;
     }
 
     /// <summary>
     /// 記憶にあるメモリか
     /// </summary>
-    bool HasMemory(EnemyMovementBase memory)
+    bool HasMemory(MovementMemory memory)
     {
         var storeMem = AllMemories.Find(m => m == memory);
         return storeMem != null;
@@ -200,9 +201,9 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
 
         RemoveAllSubgoals();
 
-        // なにもないときにあたりを歩き回るプランを設定しておく
-        var memory = new EnemyMovementBase();
-        memory.Plan = new PlanWander();
+        // なにもないときにあたりを歩き回る行動を設定しておく
+        var memory = new MovementMemory();
+        memory.Movement = new WanderMovement();
 
         _longMemories.Add(memory);
     }
@@ -211,7 +212,7 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     {
         ActivateIfInactive();
 
-        EnemyMovementBase selectedPlan = EvaluatePlans();
+        EnemyMovementBase selectedPlan = EvaluateMovements();
         bool needsChangePlan = (selectedPlan != null) && (_currentPlan != selectedPlan);
         if (needsChangePlan)
         {

@@ -19,9 +19,9 @@ public class MovementMemory : MonoBehaviour
         //
     }
 
-    public MovementMemory(EnemyMovementBase movementObject)
+    public MovementMemory(MovementObject movementObject)
     {
-        Movement = movementObject.Plan;
+        Movement = movementObject.Movement;
         Target = movementObject.Target;
         Position = movementObject.Position;
     }

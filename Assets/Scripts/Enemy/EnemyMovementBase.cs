@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ゴールの種別
+/// 行動の種別
 /// </summary>
-public enum GoalType
+public enum MovementType
 {
     // うろつく
     Wander,
@@ -22,23 +22,22 @@ public enum GoalType
 /// </summary>
 public class EnemyMovementBase
 {
-    public GoalType GoalType { get; protected set; }
+    public MovementType MovementType { get; protected set; }
 
     /// <summary>
     /// 報酬リスト
     /// </summary>
     public List<Rewards> RewardProspects { get; protected set; }
 
-
     #region コンストラクタ
 
     public EnemyMovementBase() { }
 
-    public EnemyMovementBase(GoalType goalType) : this(goalType, new List<Rewards>()) { }
+    public EnemyMovementBase(MovementType movementType) : this(movementType, new List<Rewards>()) { }
 
-    public EnemyMovementBase(GoalType goalType, List<Rewards> rewards)
+    public EnemyMovementBase(MovementType movementType, List<Rewards> rewards)
     {
-        GoalType = goalType;
+        this.MovementType = movementType;
         RewardProspects = rewards;
     }
 
@@ -46,19 +45,19 @@ public class EnemyMovementBase
 }
 
 /// <summary>
-/// あたりをうろつくプラン
+/// うろつく
 /// </summary>
-public class PlanWander : EnemyMovementBase
+public class WanderMovement : EnemyMovementBase
 {
-    public PlanWander() : base(GoalType.Wander) { }
+    public WanderMovement() : base(MovementType.Wander) { }
 }
 
 /// <summary>
 /// 攻撃
 /// </summary>
-public class PlanGetPower : EnemyMovementBase
+public class AttackMovement : EnemyMovementBase
 {
-    public PlanGetPower() : base(GoalType.Defence)
+    public AttackMovement() : base(MovementType.Attack)
     {
         var reward = new Rewards(RewardType.Power, 0.1f);
         RewardProspects.Add(reward);
@@ -68,9 +67,9 @@ public class PlanGetPower : EnemyMovementBase
 /// <summary>
 /// 防御
 /// </summary>
-public class PlanGetEnergy : EnemyMovementBase
+public class DefenceMovement : EnemyMovementBase
 {
-    public PlanGetEnergy() : base(GoalType.Attack)
+    public DefenceMovement() : base(MovementType.Defence)
     {
         var reward = new Rewards(RewardType.Enegy, 0.1f);
         RewardProspects.Add(reward);
@@ -79,6 +78,6 @@ public class PlanGetEnergy : EnemyMovementBase
 
 public class PlanAttackTarget : EnemyMovementBase
 {
-    public PlanAttackTarget() : base(GoalType.Attack, new List<Rewards>()) { }
+    public PlanAttackTarget() : base(MovementType.Attack, new List<Rewards>()) { }
 }
 

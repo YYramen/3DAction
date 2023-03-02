@@ -12,21 +12,21 @@ public class MovementObject : MonoBehaviour
     public GameObject Target { get { return gameObject; } }
 
     [SerializeField]
-    private GoalType _goalType;
+    private MovementType _goalType;
 
     void Awake()
     {
         switch (_goalType)
         {
-            case GoalType.Wander:
-                Movement = new PlanWander();
+            case MovementType.Wander:
+                Movement = new WanderMovement();
                 break;
 
-            case GoalType.Defence:
-                Movement = new PlanGetPower();
+            case MovementType.Defence:
+                Movement = new AttackMovement();
                 break;
 
-            case GoalType.Attack:
+            case MovementType.Attack:
                 Movement = new PlanAttackTarget();
                 break;
 
