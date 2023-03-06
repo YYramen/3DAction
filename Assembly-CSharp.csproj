@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImagePool.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageBase.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestPlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAttackTask.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyPersonality.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageControllerBase.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackWithInputSystem.cs" />
     <Compile Include="Assets\Scripts\Player\Commands\CommandInvoker.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Scripts\CommandPattern\TestICommand.cs" />
     <Compile Include="Assets\Scripts\Player\AttackAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemy\Rewards.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MovementMemory.cs" />
     <Compile Include="Assets\Scripts\Player\Not Use\PlayerMove.cs" />
     <Compile Include="Assets\Fighter Pack Bundle FREE\Code\CameraControl.cs" />
     <Compile Include="Assets\Fighter Pack Bundle FREE\Code\FighterAnimationDemoFREE.cs" />
@@ -90,16 +93,13 @@
     <Compile Include="Assets\Scripts\Player\AfterImage\SimpleAfterImage.cs" />
     <Compile Include="Assets\Scripts\Player\Commands\AttackCommands\KickPunchComboCommand.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyCharacterBase.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MovementObject.cs" />
     <Compile Include="Assets\Scripts\Player\AfterImage\AfterImageSkinnedMesh.cs" />
     <Compile Include="Assets\Scripts\Player\Commands\ICommand.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestTurnLeftCommand.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\CommandPattern\TestInputHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovementBase.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MovementMemory.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyPersonality.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MovementObject.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAttackTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

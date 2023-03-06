@@ -12,7 +12,7 @@ public class MovementMemory : MonoBehaviour
     public GameObject Target { get; set; }
 
 
-    #region Constructor
+    #region コンストラクタ
 
     public MovementMemory()
     {

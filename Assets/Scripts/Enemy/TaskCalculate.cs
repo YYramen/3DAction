@@ -116,25 +116,24 @@ public class TaskCalculate<T> : CompositeTask<T> where T : EnemyAIBase
     {
         switch (movements.MovementType)
         {
-            // Ç§ÇÎÇ¬Ç≠
-            case MovementType.Wander:
-                {
-                    return new GoalWander<T>(_owner);
-                }
-
-            // ñhå‰
-            case MovementType.Defence:
-                {
-                    var memory = FindMemory(movements);
-                    return new GoalGetItem<T>(_owner, memory.Target);
-                }
-
             // ÉvÉåÉCÉÑÅ[ÇçUåÇ
             case MovementType.Attack:
                 {
                     var memory = FindMemory(movements);
                     return new EnemyAttackTask<T>(_owner, memory.Target, memory.Position);
                 }
+            //// Ç§ÇÎÇ¬Ç≠
+            //case MovementType.Wander:
+            //    {
+            //        return new GoalWander<T>(_owner);
+            //    }
+
+            //// ñhå‰
+            //case MovementType.Defence:
+            //    {
+            //        var memory = FindMemory(movements);
+            //        return new GoalGetItem<T>(_owner, memory.Target);
+            //    }
         }
 
         return new Task<T>(_owner);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyPersonality : EnemyCharacterBase<EnemyAIBase>
 {
-    #region Constructor
+    #region コンストラクタ
 
     // コンストラクタ
     public EnemyPersonality(EnemyAIBase owner) : base(owner) { }
